@@ -4,10 +4,12 @@
     font-family: 'raleway','Segoe UI';
     color: #383833;
     /* outline: 2.5px double #ff010180;  */
+    user-select: none;
+    -webkit-user-drag:none ;
 }
-*:hover{
+/* *:hover{
     outline: 3px double rgb(56, 1, 255); 
-}
+} */
 
 
 a{
@@ -127,12 +129,42 @@ p{
 }
 .bubble--Three{
     position:relative;
-    top: -57.5vh;
-    left: -15vw;
-    width: 1360px;
-    height:  1360px;
+    /* top: 150px; */
+    /* left: -175px; */
+    right:14vw;
+
+    width: 125vw;
+    height:  100vw;
     background: #598463;
 }
+.bg__logo{
+    background:   #FFFFFF ;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 18.5vw;
+    width: 18.5vw;
+    position:absolute ;
+    left: 50%;
+    transform: translateX(-9.25vw) translatey(-10vw);
+    z-index: 99;
+    border-radius: 50%;
+}
+.bg__logo img{
+    height:12.5vw; 
+    width:12.5vw; 
+}
+/* .bubble--Three::after{
+    content:"";
+    height: 225px;
+    width: 225px;
+    background-position: center;
+    z-index: 99;
+    position:absolute;
+    top: -100px;
+    left: 49vw;
+    
+} */
 img.background__chili{
     position:relative;
     top: -95vh;
@@ -225,5 +257,29 @@ img.background__chili{
 
 footer{
     overflow: hidden;
-    height: 30vh;
+    height: 325px;
+}
+.background__bubble{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 50px ;
+}
+.nav--footer{
+    position: relative;
+    top: 10%;
+    margin-top: 10px;
+
+    /* height: 50px; */
+    /* width: 100px; */
+
+}
+.nav--footer a{
+    color: #FaFaFa;
+    font-weight: 600;
+}
+.nav--icon{
+    margin-top: 25px;
+    padding-left: 20%;
 }
