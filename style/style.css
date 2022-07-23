@@ -15,7 +15,9 @@
 a{
     text-decoration: none;
 }
-
+body{
+    /* background: #eeee78; */
+}
 header{
     position: fixed;
     top: 0;
@@ -23,22 +25,40 @@ header{
     background-image: linear-gradient(180deg,#fafafa ,#fafafabd );
     display: flex;
     justify-content: space-between;
-    width: 90vw;
+    width: 90%;
     height: 10vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 5%;
+    padding-right: 5%;
     align-items: center;
     z-index: 1000;
+    transition: all 0.1s ease-in-out;
 }
+
+
 nav{
     font-size: 24px;
-    
+        /* transition: 3s ease; */
     font-weight: bold;
     display: flex;
     gap: 5vw;
 }
 
 
+.humburger{
+    display: none;
+    cursor: pointer;
+
+} 
+.Bar{
+    display: block;
+    height: 5px;
+    width: 40px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    background-color:#383833;
+}
 article{
     height: 100vh;
     background-image: linear-gradient(180deg, #DEF0D8, #FAFAFA);
@@ -192,25 +212,12 @@ img.background__chili{
     align-items: center;
     gap: 20px;
 }
-.content__Galery{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
+
 .Galary--menu{
     gap: 24px;
 }
 .Galary--customers{
     gap: 1vw;
-}
-.Galary--contact{
-
-    gap: 7.5vw;
-    margin-top: 100px;
-    margin-bottom: 100px;
-
 }
 .Galary--menu > .Galery__child {
     
@@ -220,11 +227,18 @@ img.background__chili{
 /* .Galary--customers > img{
 
 } */
-#contact{
+
+
+
+.content__Galery{
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 100px;
+    /* width: 100vw; */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px;
+    
 }
+
 .Galary--contact > .Galery__child{
     display: flex;
     flex-direction: column;
@@ -232,11 +246,23 @@ img.background__chili{
     align-items: center;
     background-color: #FFFFFF;
     height: 180px;
-    width: 25.75vw;
+    width: 300px;
     border-radius: 78px;
     box-shadow: 0px 17px 20px #00000031;
 }
+.Galary--contact{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
 
+}
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 15vw;
+}
 .Menu__info{
     position: relative;
     top: -50px;
@@ -283,3 +309,54 @@ footer{
     margin-top: 25px;
     padding-left: 20%;
 }
+
+
+
+@media only screen and (max-width: 750px) {
+     #contact{
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        /* padding-bottom: 100px; */
+
+    }
+    .header--active{
+        /* height: 300px; */
+        /* align-items: flex-start; */
+        padding-bottom: 150px;
+        background-color: #fafafaaf;
+
+    }
+    .Galary--contact  .Galery__child{
+        width: 350px;
+    }
+    
+    .humburger{
+    display: block;
+    } 
+    .humburger--active .Bar:nth-child(2){
+    opacity: 0;
+    } 
+    .humburger--active .Bar:nth-child(1){
+        transform: translateY(10px) rotate(45deg);
+    } 
+    .humburger--active .Bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    } 
+     .nav__Bar{
+        display: none;
+        margin-top: 10px;
+        padding: 0%;
+        gap: 2vw;
+        position: fixed;
+        top: 70px;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+
+    } 
+    .Bar--active{
+    display: flex; 
+    }
+  }
