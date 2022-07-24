@@ -80,7 +80,7 @@ article{
 }
 .background__chili{
     position:absolute;
-    top: 800px;
+    top: 100px;
     left: -10vh;
 }
 .background__plate{
@@ -331,7 +331,9 @@ footer{
 
 
 @media only screen and (max-width: 750px) {
-
+    .background__chili{
+        display: none;
+    }
     .bubble--one{
         position:relative;
         top: -90vh;
