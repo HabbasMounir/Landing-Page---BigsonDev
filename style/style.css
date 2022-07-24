@@ -34,7 +34,6 @@ header{
     transition: all 0.1s ease-in-out;
 }
 
-
 nav{
     font-size: 24px;
         /* transition: 3s ease; */
@@ -59,6 +58,7 @@ nav{
     border-radius: 5px;
     background-color:#383833;
 }
+
 article{
     height: 100vh;
     background-image: linear-gradient(180deg, #DEF0D8, #FAFAFA);
@@ -69,12 +69,27 @@ article{
 .description{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     position:relative;
-    top: 12.5vh;
-    left: 1vh; 
+    top: 10vh;
+    left: 2vh; 
+    gap: 10vw ;
     z-index: 99;
+    margin: 10px;
+
 }
+.background__chili{
+    position:absolute;
+    top: 800px;
+    left: -10vh;
+}
+.background__plate{
+    /* position:relative; */
+    /* bottom:10vh; */
+    /* left: 50vw; */
+    z-index: 1;
+}
+
 .description__content{
     width: 500px;
     display: flex;
@@ -125,23 +140,31 @@ p{
 .btn--green{
     background-color: #387546;
 }
+
+
+
+
+
+
+
 .background__bubble{
     border-radius: 50%;
     
     opacity: 1;
 }
+
 .bubble--one{
-    position:relative;
-    top: -77.5vh;
-    left: 50vw;
+        position:relative;
+        top: -77.5vh;
+        right:-50vw;
     width: 900px;
     height: 900px;
     background: #387546;
     
 }
 .bubble--two{
-    position:relative;
-    top: -57.5vh;
+    position:absolute;
+    top: 100.5vh;
     left: -15vw;
     width: 600px;
     height: 600px;
@@ -174,24 +197,19 @@ p{
     height:12.5vw; 
     width:12.5vw; 
 }
-/* .bubble--Three::after{
-    content:"";
-    height: 225px;
-    width: 225px;
-    background-position: center;
-    z-index: 99;
-    position:absolute;
-    top: -100px;
-    left: 49vw;
-    
-} */
+
 img.background__chili{
     position:relative;
     top: -95vh;
     left: -02.5vw;
     z-index: 99;
 }
-
+/* .background__plate{
+    position:absolute;
+    top: -95vh;
+    left: -02.5vw;
+    z-index: 99;
+} */
 
 #About_us{
     height: 80vh;
@@ -313,6 +331,19 @@ footer{
 
 
 @media only screen and (max-width: 750px) {
+
+    .bubble--one{
+        position:relative;
+        top: -90vh;
+        /* left: -175px; */
+        right:100px;
+    }
+    #main h1{
+        color:#FAFAFA
+    }
+    .description{
+        gap: 0vw;
+    }
      #contact{
         display: flex;
         /* flex-direction: column; */
