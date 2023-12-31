@@ -13,7 +13,8 @@ let naver__Bar =document.querySelectorAll(".naver__Bar")
     element.addEventListener("click",function (){ 
      humburgerIcon.classList.toggle("humburger--active")
     header.classList.toggle("header--active")
-    nav__bar.classList.toggle("Bar--active")
+    nav__bar.style.display="flex"
  }
  )
 })
+console.log("d")
